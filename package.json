@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Yaroslav-Zozulya.github.io/js-lessones",
+  "homepage": "https://Yaroslav-Zozulya.github.io/js-lessons",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /js-lessones/"
+    "build": "parcel build src/*.html --public-url /js-lessons/"
   },
   "repository": {
     "type": "git",
