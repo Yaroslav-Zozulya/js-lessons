@@ -2,6 +2,13 @@
  * Главный файл стилей.
  * Все паршалы подключаются сюда.
  */
+// BASE
+@import './base/modern-normalize';
+@import './base/reset';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+//COMPONENTS
+@import './components/container';
+@import './components/links';
+
+//LAYOUTS
+@import './layouts/mane-page';
