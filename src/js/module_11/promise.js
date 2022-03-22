@@ -80,7 +80,12 @@ function onMakeOrderError(error) {
   console.log(error);
 }
 
+/*
+ * FetchAPI
+ */
+
 const fetchPokemonById = id => {
+  //обратить внимание
   return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
 };
 
@@ -93,5 +98,5 @@ function onFetchError(error) {
 }
 
 fetchPokemonById(1).then(onFetchSuccess).catch(onFetchError);
-fetchPokemonById(3).then(onFetchSuccess).catch(onFetchError);
 fetchPokemonById(2).then(onFetchSuccess).catch(onFetchError);
+fetchPokemonById(3).then(onFetchSuccess).catch(onFetchError);
