@@ -24,7 +24,7 @@ import '../../sass/main.scss';
 // }
 
 /*
- * Очистка setTimeout c cleaerTimeout(timeoutId)
+ * Очистка setTimeout c clearTimeout(timeoutId)
  */
 
 const logger = time => {
