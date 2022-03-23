@@ -53,6 +53,7 @@ promise
 /*
  * Промисификация "Синхронных" функций
  */
+import '../../sass/main.scss';
 
 const makeOrder = dish => {
   const DELAY = 1000;

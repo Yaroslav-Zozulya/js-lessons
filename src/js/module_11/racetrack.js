@@ -1,3 +1,5 @@
+import '../../sass/main.scss';
+
 let horses = ['Secretariat', 'Eclipse', 'West Australian', 'Flying Fox', 'Seabiscuit'];
 
 let raceCounter = 0;
