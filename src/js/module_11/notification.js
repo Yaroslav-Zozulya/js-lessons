@@ -16,12 +16,15 @@ function onNotificationClick() {
 
 function showNotification() {
   refs.notification.classList.add('is-visible');
+
   setTimeout(() => {
-    hideNotification();
+    if (refs.notification.classList.contains('is-visible')) {
+      hideNotification();
+    }
   }, NOTIFICATION_DELAY);
 }
 
 function hideNotification() {
   refs.notification.classList.remove('is-visible');
-  console.log('test');
+  console.log('close notification');
 }
