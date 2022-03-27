@@ -1,6 +1,7 @@
 import '../../sass/main.scss';
 
 const NOTIFICATION_DELAY = 3000;
+let timeoutId = null;
 
 const refs = {
   notification: document.querySelector('.js-alert'),
@@ -12,15 +13,14 @@ showNotification();
 
 function onNotificationClick() {
   hideNotification();
+  clearTimeout(timeoutId);
 }
 
 function showNotification() {
   refs.notification.classList.add('is-visible');
 
-  setTimeout(() => {
-    if (refs.notification.classList.contains('is-visible')) {
-      hideNotification();
-    }
+  timeoutId = setTimeout(() => {
+    hideNotification();
   }, NOTIFICATION_DELAY);
 }
 
