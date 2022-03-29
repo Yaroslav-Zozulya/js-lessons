@@ -11,7 +11,15 @@ class Timer {
     this.intervalId = null;
     this.isActive = false;
     this.onTick = onTick;
+
+    this.init();
   }
+
+  init() {
+    const time = this.getTimeComponents(0);
+    this.onTick(time);
+  }
+
   start() {
     if (this.isActive) {
       return;
@@ -21,7 +29,7 @@ class Timer {
     this.intervalId = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = currentTime - startTime;
-      const time = getTimeComponents(deltaTime);
+      const time = this.getTimeComponents(deltaTime);
       this.onTick(time);
     }, 1000);
   }
@@ -29,42 +37,40 @@ class Timer {
   stop() {
     clearInterval(this.intervalId);
     this.isActive = false;
+    const time = this.getTimeComponents(0);
+    this.onTick(time);
+  }
+  /*
+   * Принимает время в милисекундах
+   * Высчитывает сколько в них вмещается часов/минут/секунд
+   * Возвращает объект со свойствами hours, mins, secs
+   */
+  getTimeComponents(time) {
+    const hours = this.pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const mins = this.pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
+    const secs = this.pad(Math.floor((time % (1000 * 60)) / 1000));
+
+    return { hours, mins, secs };
+  }
+
+  /*
+   * Принимает число
+   * Привод к строке
+   * Добавляет в начало ноль если число меньше двух символов
+   */
+
+  pad(value) {
+    return String(value).padStart(2, '0');
   }
 }
 
 const timer = new Timer({ onTick: updateClockFace });
 
-refs.startBtn.addEventListener('click', () => {
-  timer.start();
-});
+refs.startBtn.addEventListener('click', timer.start.bind(timer));
 
-refs.stopBtn.addEventListener('click', () => {
-  timer.stop();
-});
+refs.stopBtn.addEventListener('click', timer.stop.bind(timer));
 
 function updateClockFace({ hours, mins, secs }) {
   refs.clockface.textContent = `${hours}:${mins}:${secs}`;
-}
-
-/*
- * Принимает время в милисекундах
- * Высчитывает сколько в них вмещается часов/минут/секунд
- * Возвращает объект со свойствами hours, mins, secs
- */
-function getTimeComponents(time) {
-  const hours = pad(Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-  const mins = pad(Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)));
-  const secs = pad(Math.floor((time % (1000 * 60)) / 1000));
-
-  return { hours, mins, secs };
-}
-
-/*
- * Принимает число
- * Привод к строке
- * Добавляет в начало ноль если число меньше двух символов
- */
-
-function pad(value) {
-  return String(value).padStart(2, '0');
+  console.log(`${hours}:${mins}:${secs}`);
 }

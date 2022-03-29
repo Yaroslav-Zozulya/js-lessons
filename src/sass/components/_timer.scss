@@ -1,0 +1,29 @@
+.clockface {
+  text-align: center;
+  font-size: 60px;
+}
+
+.clockface {
+  margin-bottom: 20px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.timer-btn,
+.timer-btn {
+  border: none;
+  padding: 10px;
+
+  font-size: 25px;
+  color: #fff;
+  background-color: rgb(62, 125, 242);
+
+  transition: background-color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: rgb(26, 103, 247);
+  }
+}
