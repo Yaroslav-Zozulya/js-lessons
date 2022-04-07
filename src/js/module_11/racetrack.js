@@ -19,7 +19,7 @@ refs.startBtn.addEventListener('click', onStart);
 function onStart() {
   raceCounter += 1;
   const promises = horses.map(run);
-
+  console.log(promises);
   updateWinnerField('');
   updateProgressField('🚴‍♂️ Заезд начался, ставки не принимаются');
   determineWinner(promises);
