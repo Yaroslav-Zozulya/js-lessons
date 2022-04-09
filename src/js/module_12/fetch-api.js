@@ -1,27 +1,20 @@
+import getRefs from './get-refs';
+
 import '../../sass/main.scss';
+import API from './api-service';
+const refs = getRefs();
 
-const pokemonCard = document.querySelector('.js-pokemon-card');
-const searchForm = document.querySelector('.js-search-form');
-const searchBtn = document.querySelector('.js-search-text');
+refs.searchForm.addEventListener('submit', onSearch);
 
-searchForm.addEventListener('submit', onSearch);
+function onSearch(e) {
+  e.preventDefault();
 
-function onSearch() {
-  event.preventDefault();
+  const pokemonId = refs.searchInput.value;
 
-  const pokemonId = searchBtn.value;
-
-  fetchPokemon(pokemonId)
+  API.fetchPokemon(pokemonId)
     .then(renderPokemonCard)
-    .catch(error => console.log(error));
-
-  searchForm.reset();
-}
-
-function fetchPokemon(pokemonId) {
-  return fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`).then(response => {
-    return response.json();
-  });
+    .catch(onFetchError)
+    .finally(() => refs.searchForm.reset());
 }
 
 function renderPokemonCard({ abilities, sprites, name, weight, height }) {
@@ -42,5 +35,31 @@ function renderPokemonCard({ abilities, sprites, name, weight, height }) {
         </div>
       </div>`;
 
-  pokemonCard.innerHTML = markup;
+  refs.pokemonCard.innerHTML = markup;
 }
+
+function onFetchError(error) {
+  console.log(error);
+  alert(`Всё в говне ${error}`);
+}
+
+/* FETCH API */
+
+const URL = 'https://newsapi.org/v2/everything?q=putin';
+const options = {
+  headers: {
+    'X-Api-Key': '2c0c2ef4d79449a7b94dbbfe07d82cd9',
+  },
+};
+
+fetch('https://newsapi.org/v2/everything?q=putin&apiKey=2c0c2ef4d79449a7b94dbbfe07d82cd9', {
+  headers: {
+    'X-Api-Key': '2c0c2ef4d79449a7b94dbbfe07d82cd9',
+  },
+})
+  .then(response => response.json())
+  .then(response => console.log(response));
+
+fetch(URL, options)
+  .then(response => response.json())
+  .then(console.log);
