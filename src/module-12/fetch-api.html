@@ -15,6 +15,12 @@
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <div class="container">
       <a href="../index.html" class="links">Back</a>
+      <form action="" class="js-search-form">
+        <input type="text" name="query" class="js-search-text" />
+        <button type="submit" data-search-btn>Искать</button>
+      </form>
+
+      <div class="js-pokemon-card"></div>
     </div>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
