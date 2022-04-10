@@ -26,8 +26,8 @@ function renderPokemonCard({ abilities, sprites, name, weight, height }) {
         <div class="card-img-top"><img src="${sprites.front_default}" alt="" /></div>
         <div class="card-body">
           <h2 class="card-title">Имя: ${name}</h2>
-          <p class="card-text">Вес:${weight}кг</p>
-          <p class="card-text">Рост:${height}м</p>
+          <p class="card-text">Вес: ${weight}кг</p>
+          <p class="card-text">Рост: ${height}м</p>
           <p class="card-text">Умения</p>
           <ul class="list-group">
              ${ability}
