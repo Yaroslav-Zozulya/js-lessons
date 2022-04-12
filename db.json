@@ -45,29 +45,6 @@
         "классика"
       ],
       "rating": 9.9
-    },
-    {
-      "title": "Big JS BOOK",
-      "author": "don not no",
-      "genres": [
-        "Программирование"
-      ],
-      "rating": 10,
-      "id": 6
-    },
-    {
-      "title": "Big JS BOOK",
-      "author": "don not no",
-      "genres": [
-        "Программирование"
-      ],
-      "rating": 10,
-      "id": 7
-    },
-    {
-      "title": "Big JS BOOK",
-      "author": "don not no",
-      "id": 8
     }
   ]
 }

@@ -50,15 +50,28 @@ const BASE_URL = 'http://localhost:3000';
  * PUTCH request
  */
 
-function updateBookById(book, bookId) {
+// function updateBookById(book, bookId) {
+//   const options = {
+//     method: 'PATCH',
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//     body: JSON.stringify(book),
+//   };
+//   return fetch(`http://localhost:3000/books/${bookId}`, options).then(r => r.json());
+// }
+
+// updateBookById({ title: 'Big JS BOOK', author: 'don not no' }, 6);
+
+/*
+ * DELETE request
+ */
+
+function deleteBookById(bookId) {
   const options = {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(book),
+    method: 'DELETE',
   };
-  return fetch(`http://localhost:3000/books/${bookId}`, options).then(r => r.json());
+  return fetch(`${BASE_URL}/books/${bookId}`, options).then(response => response.json());
 }
 
-updateBookById({ title: 'Big JS BOOK', author: 'don not no' }, 6);
+deleteBookById(6).catch(error => console.log(`'Возникла ошибка: ${error}`));
