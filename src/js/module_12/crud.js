@@ -67,11 +67,11 @@ const BASE_URL = 'http://localhost:3000';
  * DELETE request
  */
 
-function deleteBookById(bookId) {
-  const options = {
-    method: 'DELETE',
-  };
-  return fetch(`${BASE_URL}/books/${bookId}`, options).then(response => response.json());
-}
+// function deleteBookById(bookId) {
+//   const options = {
+//     method: 'DELETE',
+//   };
+//   return fetch(`${BASE_URL}/books/${bookId}`, options).then(response => response.json());
+// }
 
-deleteBookById(6).catch(error => console.log(`'Возникла ошибка: ${error}`));
+// deleteBookById(6).catch(error => console.log(`'Возникла ошибка: ${error}`));

@@ -2,7 +2,7 @@
   "books": [
     {
       "id": 1,
-      "title": "Последнее королевство",
+      "title": "TEST FUNCTION",
       "author": "Бернард Корнуэлл",
       "genres": [
         "приключения"
@@ -45,6 +45,64 @@
         "классика"
       ],
       "rating": 9.9
+    },
+    {
+      "title": "CSS for beginner",
+      "author": "A. Repeta",
+      "genres": [
+        "Программирование"
+      ],
+      "rating": 10,
+      "id": 7
+    },
+    {
+      "title": "CSS for beginner",
+      "author": "A. Repeta",
+      "genres": [
+        "Программирование"
+      ],
+      "rating": 10,
+      "id": 8
+    },
+    {
+      "title": "CSS for beginner",
+      "author": "A. Repeta",
+      "genres": [
+        "Программирование"
+      ],
+      "rating": 10,
+      "id": 9
+    },
+    {
+      "title": "CSS for beginner",
+      "author": "A. Repeta",
+      "genres": [
+        "Программирование"
+      ],
+      "rating": 10,
+      "id": 10
+    },
+    {
+      "title": "CSS for beginner",
+      "author": "A. Repeta",
+      "genres": [
+        "Программирование"
+      ],
+      "rating": 10,
+      "id": 11
+    },
+    {
+      "title": "CSS for beginner",
+      "author": "A. Repeta",
+      "genres": [
+        "Программирование"
+      ],
+      "rating": 10,
+      "id": 12
+    },
+    {
+      "title": "some book",
+      "id": 13
     }
   ]
 }
