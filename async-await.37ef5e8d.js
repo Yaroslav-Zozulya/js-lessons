@@ -1,6 +1,6 @@
 parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"clu1":[function(require,module,exports) {
 
-},{}],"KQFw":[function(require,module,exports) {
-"use strict";require("../../sass/main.scss");const s="http://localhost:3000";function t(t){return fetch(`${s}/books/${t}`,{method:"DELETE"}).then(s=>s.json())}t(6).catch(s=>console.log(`'Возникла ошибка: ${s}`));
-},{"../../sass/main.scss":"clu1"}]},{},["KQFw"], null)
-//# sourceMappingURL=/js-lessons/crud.5f2ed690.js.map
+},{}],"N6wk":[function(require,module,exports) {
+"use strict";function s(s){const a={strawberry:"🍍",apple:"🍎",banana:"🍌"};return new Promise(n=>setTimeout(()=>n(a[s]),500))}async function a(){const a=s("strawberry"),n=s("banana"),e=await Promise.all([a,n]);console.log(e)}require("../../sass/main.scss"),a();
+},{"../../sass/main.scss":"clu1"}]},{},["N6wk"], null)
+//# sourceMappingURL=/js-lessons/async-await.37ef5e8d.js.map
