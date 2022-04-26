@@ -86,7 +86,7 @@ class Tabs {
   }
 }
 
-const tabs1 = new Tabs({
+new Tabs({
   rootSelector: '#tabs-1',
   activeControlClass: 'controls__item--active',
   activePaneClass: 'pane--active',
