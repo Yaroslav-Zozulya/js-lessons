@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Асинхронные функции | Async/Await</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
+    <div class="container">
+      <div class="back-link">
+        <a href="../index.html" class="links">Back</a>
+      </div>
+      <div class="tabs" id="tabs-1">
+        <div class="controls" data-controls>
+          <a href="#apple" class="controls_item">🍎 Яблоко</a>
+          <a href="#grapes" class="controls_item">🍇 Виноград</a>
+          <a href="#peach" class="controls_item">🍊 Персик</a>
+        </div>
+
+        <div class="panes" data-panes>
+          <div class="pane" id="apple">
+            <h2 class="pane__fruit">🍎</h2>
+            <p class="pane__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vero ipsa repellat
+              doloremque quasi rem provident temporibus aperiam a nam similique id dignissimos,
+              corporis itaque optio aliquid repellendus non eum.
+            </p>
+          </div>
+
+          <div class="pane" id="grapes">
+            <h2 class="pane__fruit">🍇</h2>
+            <p class="pane__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vero ipsa repellat
+              doloremque quasi rem provident temporibus aperiam a nam similique id dignissimos,
+              corporis itaque optio aliquid repellendus non eum.
+            </p>
+          </div>
+
+          <div class="pane" id="peach">
+            <h2 class="pane__fruit">🍊</h2>
+            <p class="pane__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus vero ipsa repellat
+              doloremque quasi rem provident temporibus aperiam a nam similique id dignissimos,
+              corporis itaque optio aliquid repellendus non eum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
+    <script src="../js/tabs/tabs.js"></script>
+  </body>
+</html>
